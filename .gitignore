@@ -6,6 +6,12 @@
 *.lo
 *.o
 *.obj
+*.suo
+*.db
+*.opendb
+*.ipch
+*.vcxproj
+*.vcxproj.filters
 
 # Precompiled Headers
 *.gch
