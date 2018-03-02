@@ -2,6 +2,7 @@
 
 #include "encryption.h"
 #include <cmath>
+#include <string>
 using big = unsigned long long;
 
 namespace User
@@ -17,22 +18,24 @@ namespace User
 	const big DEFAULT_SIGNATURE = 0b1010101010101010101010101010101010101010101010101010101010101010;
 
 	int GCD(int one, int two)
-	{	if(0 == one) return two;
+	{	
+		if(0 == one) return two;
 		if(0 == two) return one;
 		return GCD(two, one % two);
 	}
 
 	big ModX(big base, big expo, big n)
-	{	big ans = 1;
+	{	
+		big ans = 1;
 		while(expo--){ ans = ans*base % n; }
 		return ans;
 	}
 
-	string	Encrypt(string message, big other_key, big other_n) { return message; }//Call big Encrypt foreach chunk of data in our message.
+	std::string	Encrypt(std::string message, big other_key, big other_n) { return message; }//Call big Encrypt foreach chunk of data in our message.
 
 	big		Encrypt(big message, big other_key, big other_n)	{ return ModX(message, other_key, other_n); }
 
-	string	Decrypt(string message)								{ return message; }//Call big Decrypt foreach chunk of data in our message
+	std::string	Decrypt(std::string message)								{ return message; }//Call big Decrypt foreach chunk of data in our message
 
 	big		Decrypt(big message)								{ return ModX(message, d_key, n); }
 
