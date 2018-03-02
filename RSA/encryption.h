@@ -7,7 +7,7 @@ using big = unsigned long long;
 
 namespace User
 {	
-	big n,			//The number to modulate messages sent to us
+		big n,		//The number to modulate messages sent to us
 		e_key,		//Our public  encryption key
 		d_key;		//Our private decryption key
 //		message,	//A large piece of the message
@@ -33,14 +33,14 @@ namespace User
 
 	std::string	Encrypt(std::string message, big other_key, big other_n) { return message; }//Call big Encrypt foreach chunk of data in our message.
 
-	big		Encrypt(big message, big other_key, big other_n)	{ return ModX(message, other_key, other_n); }
+	big			Encrypt(big message, big other_key, big other_n)	{ return ModX(message, other_key, other_n); }
 
 	std::string	Decrypt(std::string message)								{ return message; }//Call big Decrypt foreach chunk of data in our message
 
-	big		Decrypt(big message)								{ return ModX(message, d_key, n); }
+	big			Decrypt(big message)								{ return ModX(message, d_key, n); }
 
-	big SendSignature(big signiture = DEFAULT_SIGNATURE)		{ return Decrypt(signiture); }
+	big			SendSignature(big signiture = DEFAULT_SIGNATURE)		{ return Decrypt(signiture); }
 
-	big TestSignature(big e_signature, big other_key, big other_n, big d_signature = DEFAULT_SIGNATURE)
-		{ return d_signature == ModX(e_signature, other_key, other_n); }
+	big			TestSignature(big e_signature, big other_key, big other_n, big d_signature = DEFAULT_SIGNATURE)
+				{ return d_signature == ModX(e_signature, other_key, other_n); }
 }
