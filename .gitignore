@@ -10,8 +10,6 @@
 *.db
 *.opendb
 *.ipch
-*.vcxproj
-*.vcxproj.filters
 
 # Precompiled Headers
 *.gch
