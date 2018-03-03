@@ -34,6 +34,8 @@ int main()
 		case 1:
 			{
 
+			generateKey(59, 79);
+
 			break;
 			}
 

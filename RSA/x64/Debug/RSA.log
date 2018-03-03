@@ -1,0 +1,29 @@
+﻿  keygen.cpp
+  encryption.cpp
+  Generating Code...
+  Compiling...
+  main.cpp
+  Generating Code...
+keygen.obj : error LNK2005: "class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl User::Decrypt(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?Decrypt@User@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V23@@Z) already defined in encryption.obj
+keygen.obj : error LNK2005: "unsigned __int64 __cdecl User::Decrypt(unsigned __int64)" (?Decrypt@User@@YA_K_K@Z) already defined in encryption.obj
+keygen.obj : error LNK2005: "class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl User::Encrypt(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,unsigned __int64,unsigned __int64)" (?Encrypt@User@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V23@_K1@Z) already defined in encryption.obj
+keygen.obj : error LNK2005: "unsigned __int64 __cdecl User::Encrypt(unsigned __int64,unsigned __int64,unsigned __int64)" (?Encrypt@User@@YA_K_K00@Z) already defined in encryption.obj
+keygen.obj : error LNK2005: "int __cdecl User::GCD(int,int)" (?GCD@User@@YAHHH@Z) already defined in encryption.obj
+keygen.obj : error LNK2005: "unsigned __int64 __cdecl User::ModX(unsigned __int64,unsigned __int64,unsigned __int64)" (?ModX@User@@YA_K_K00@Z) already defined in encryption.obj
+keygen.obj : error LNK2005: "unsigned __int64 __cdecl User::SendSignature(unsigned __int64)" (?SendSignature@User@@YA_K_K@Z) already defined in encryption.obj
+keygen.obj : error LNK2005: "unsigned __int64 __cdecl User::TestSignature(unsigned __int64,unsigned __int64,unsigned __int64,unsigned __int64)" (?TestSignature@User@@YA_K_K000@Z) already defined in encryption.obj
+keygen.obj : error LNK2005: "unsigned __int64 User::n" (?n@User@@3_KA) already defined in encryption.obj
+keygen.obj : error LNK2005: "unsigned __int64 User::e_key" (?e_key@User@@3_KA) already defined in encryption.obj
+keygen.obj : error LNK2005: "unsigned __int64 User::d_key" (?d_key@User@@3_KA) already defined in encryption.obj
+main.obj : error LNK2005: "class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl User::Decrypt(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?Decrypt@User@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V23@@Z) already defined in encryption.obj
+main.obj : error LNK2005: "unsigned __int64 __cdecl User::Decrypt(unsigned __int64)" (?Decrypt@User@@YA_K_K@Z) already defined in encryption.obj
+main.obj : error LNK2005: "class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl User::Encrypt(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,unsigned __int64,unsigned __int64)" (?Encrypt@User@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V23@_K1@Z) already defined in encryption.obj
+main.obj : error LNK2005: "unsigned __int64 __cdecl User::Encrypt(unsigned __int64,unsigned __int64,unsigned __int64)" (?Encrypt@User@@YA_K_K00@Z) already defined in encryption.obj
+main.obj : error LNK2005: "int __cdecl User::GCD(int,int)" (?GCD@User@@YAHHH@Z) already defined in encryption.obj
+main.obj : error LNK2005: "unsigned __int64 __cdecl User::ModX(unsigned __int64,unsigned __int64,unsigned __int64)" (?ModX@User@@YA_K_K00@Z) already defined in encryption.obj
+main.obj : error LNK2005: "unsigned __int64 __cdecl User::SendSignature(unsigned __int64)" (?SendSignature@User@@YA_K_K@Z) already defined in encryption.obj
+main.obj : error LNK2005: "unsigned __int64 __cdecl User::TestSignature(unsigned __int64,unsigned __int64,unsigned __int64,unsigned __int64)" (?TestSignature@User@@YA_K_K000@Z) already defined in encryption.obj
+main.obj : error LNK2005: "unsigned __int64 User::n" (?n@User@@3_KA) already defined in encryption.obj
+main.obj : error LNK2005: "unsigned __int64 User::e_key" (?e_key@User@@3_KA) already defined in encryption.obj
+main.obj : error LNK2005: "unsigned __int64 User::d_key" (?d_key@User@@3_KA) already defined in encryption.obj
+C:\Users\Drew Deraita\Documents\GitHub\RSA\x64\Debug\RSA.exe : fatal error LNK1169: one or more multiply defined symbols found

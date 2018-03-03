@@ -10,6 +10,7 @@
 *.db
 *.opendb
 *.ipch
+*.tlog
 
 # Precompiled Headers
 *.gch

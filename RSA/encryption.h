@@ -3,6 +3,7 @@
 #include "encryption.h"
 #include <cmath>
 #include <string>
+
 using big = unsigned long long;
 
 namespace User
