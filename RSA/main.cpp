@@ -1,13 +1,12 @@
 // main.cpp : Defines the entry point for the console application.
 //
 
-#include "stdafx.h"
 #include "keygen.h"
 #include "encryption.h"
 #include "signature.h"
 #include <iostream>
 
-using namespace std;
+using namespace std;// /FORCE:MULTIPLE
 
 int main()
 {
@@ -34,7 +33,7 @@ int main()
 		case 1:
 			{
 
-			generateKey(59, 79);
+			GenerateKey(59, 79);
 
 			break;
 			}

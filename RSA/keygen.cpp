@@ -1,10 +1,9 @@
-
-#include "stdafx.h"
-
 #include "keygen.h"
 #include "encryption.h"
 
-void generateKey(int p, int q)
+using namespace User;
+
+void GenerateKey(int p, int q)
 {
 	auto const n = p * q;
 	auto const phi = (p - 1) * (q - 1);
