@@ -1,4 +1,6 @@
 #pragma once
 
 
-void GenerateKey(int p, int q);
+void GenerateKey(const int p, const int q);
+
+int InverseGCD(const int e, const int phi);

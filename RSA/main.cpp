@@ -32,7 +32,6 @@ int main()
 		{
 		case 1:
 			{
-
 			GenerateKey(59, 79);
 
 			break;
