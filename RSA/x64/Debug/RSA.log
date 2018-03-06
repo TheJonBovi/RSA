@@ -1,7 +1,2 @@
-﻿  main.cpp
-  keygen.cpp
-  encryption.cpp
-c:\users\drew deraita\documents\github\rsa\rsa\encryption.cpp(48): warning C4244: '=': conversion from 'double' to 'big', possible loss of data
-c:\users\drew deraita\documents\github\rsa\rsa\encryption.cpp(62): warning C4244: '=': conversion from 'double' to 'big', possible loss of data
-  Generating Code...
-c:\users\drew deraita\documents\github\rsa\rsa\encryption.cpp(48): error C4700: uninitialized local variable 'cipherText' used
+﻿  keygen.cpp
+  RSA.vcxproj -> C:\Users\Drew Deraita\Documents\GitHub\RSA\x64\Debug\RSA.exe

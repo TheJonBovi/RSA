@@ -54,5 +54,4 @@ big	Decrypt(big cipherText, big privateKey, big modN)
 	plainText = plainText % modN;  //this weirdness is split into 2 lines because POW was being difficult
 
 	return plainText;
-
 }
