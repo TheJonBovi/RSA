@@ -39,3 +39,29 @@ namespace User
 	big			TestSignature(big e_signature, big other_key, big other_n, big d_signature = DEFAULT_SIGNATURE)
 					{ return d_signature == ModX(e_signature, other_key, other_n); }
 }
+
+big	Encrypt(big plainText, big publicKey, big modN)
+{
+
+	big cipherText;
+
+	cipherText = plainText = pow(cipherText, publicKey);
+	plainText = plainText % modN;  //this weirdness is split into 2 lines because POW was being difficult
+
+	return plainText;
+
+
+
+}
+
+big	Decrypt(big cipherText, big privateKey, big modN)
+{
+
+	big plainText;
+
+	plainText = pow(cipherText, privateKey);
+	plainText = plainText % modN;  //this weirdness is split into 2 lines because POW was being difficult
+
+	return plainText;
+
+}

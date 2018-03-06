@@ -23,3 +23,7 @@ namespace User
 	big			SendSignature(big signiture);		
 	big			TestSignature(big e_signature, big other_key, big other_n, big d_signature);
 }
+
+big	Encrypt(big plainText, big publicKey, big modN);
+
+big	Decrypt(big cipherText, big privateKey, big modN);
