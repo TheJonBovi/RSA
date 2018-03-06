@@ -42,24 +42,15 @@ namespace User
 
 big	Encrypt(big plainText, big publicKey, big modN)
 {
+	big cipherText = pow(plainText, publicKey);
+	cipherText = cipherText % modN;  //this weirdness is split into 2 lines because POW was being difficult
 
-	big cipherText;
-
-	cipherText = plainText = pow(cipherText, publicKey);
-	plainText = plainText % modN;  //this weirdness is split into 2 lines because POW was being difficult
-
-	return plainText;
-
-
-
+	return cipherText;
 }
 
 big	Decrypt(big cipherText, big privateKey, big modN)
 {
-
-	big plainText;
-
-	plainText = pow(cipherText, privateKey);
+	big plainText = pow(cipherText, privateKey);
 	plainText = plainText % modN;  //this weirdness is split into 2 lines because POW was being difficult
 
 	return plainText;

@@ -55,11 +55,11 @@ int InverseGCD(const int e, const int phi)
 	
 	if (v[i - 1] <= 0)
 	{
-		d = v[i - 1] + n;
+		d = v[i - 1] + phi;
 	}
 	else
 	{
-		d = v[i - 1] + 2 * n;
+		d = v[i - 1] + 2 * phi;
 	}
 
 	return d;

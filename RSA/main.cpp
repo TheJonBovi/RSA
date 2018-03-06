@@ -8,10 +8,12 @@
 
 using namespace std;// /FORCE:MULTIPLE
 
+enum Menu { keygen = 1 , encrypt, decrypt, cancel };
+
 int main()
 {
 	int choice;
-	bool programRun = true;
+	auto programRun = true;
 
 	while (programRun)
 	{
@@ -30,20 +32,26 @@ int main()
 
 		switch (choice)
 		{
-		case 1:
+		case keygen:
 			{
 			GenerateKey(59, 79);
 
 			break;
 			}
 
-		case 2:
+		case encrypt:
 			{
 
 			break;
 			}
 
-		case 3: 
+		case decrypt:
+			{
+
+			break;
+			}
+
+		case cancel: 
 			cout << " End of Program.\n";
 			programRun = false;
 			return 0;
