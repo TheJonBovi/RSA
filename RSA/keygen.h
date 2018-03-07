@@ -8,6 +8,6 @@ struct keyset
 	big n;
 };
 
-keyset GenerateKey(const int p, const int q);
+keyset GenerateKey(const int p, const int q, const int inite);
 
 int InverseGCD(const int e, const int phi);

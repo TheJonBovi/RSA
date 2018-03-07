@@ -3,27 +3,27 @@
 
 using namespace User;
 
-keyset GenerateKey(const int p,const int q)
+keyset GenerateKey(const int p,const int q, const int inite)
 {
 	auto const n = p * q;
 	auto const phi = (p - 1) * (q - 1);
-	auto e = phi - 1;
+	auto e = inite;
 
 	bool foundE{};
 	while(!foundE)
 	{
 		if(User::GCD(e, phi) == 1) foundE = true;
-		else e--;
+		else e++;
 	}
 
-	auto d = n - 1;
+	auto d = 2;
 	//d = InverseGCD(e, phi);
 
 	bool foundD{};
-	while(!foundD)
+	while(!foundD && d < phi)
 	{
-		if((e * d) % phi == 1 && d > 0) foundD = true;
-		else d--;
+		if((e * d) % phi == 1) foundD = true;
+		else d++;
 	}
 
 	keyset retset;
@@ -43,16 +43,17 @@ int InverseGCD(const int e, const int phi)
 
 	auto i{ 1 };
 	int d;
+	int y;
 
 	g[0] = phi;
 	g[1] = e;
-	u[0] = v[0] = 1;
+	u[0] = v[1] = 1;
 	u[1] = v[0] = 0;
 
 	while (g[i])
 	{
 		g[i] = u[i] * phi + v[i] * e;
-		const int y = g[i - 1] / g[i];
+		y = g[i - 1] / g[i];
 		g[i + 1] = g[i - 1] - y * g[i];
 		u[i + 1] = u[i - 1] - y * u[i];
 		v[i + 1] = v[i - 1] - y * v[i];

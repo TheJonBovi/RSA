@@ -37,9 +37,9 @@ int main()
 		case 1:
 			{
 				//GenerateKey(59, 79, 1);
-				const keyset keys1 = GenerateKey(59, 79);
-				const keyset keys2 = GenerateKey(10067, 10159);
-				const keyset keys3 = GenerateKey(10067, 10159);
+				const auto keys1 = GenerateKey(59, 79, 2);
+				const auto keys2 = GenerateKey(10067, 10159, 10);
+				const auto keys3 = GenerateKey(10067, 10159, 15);
 
 				cout << " ***Keyset 1*** \n";
 				cout << " N: " << keys1.n << "\n";
