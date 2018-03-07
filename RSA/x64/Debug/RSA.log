@@ -1,4 +1,2 @@
-﻿  keygen.cpp
-c:\users\drew deraita\documents\github\rsa\rsa\keygen.cpp(58): warning C4244: '=': conversion from 'big' to 'int', possible loss of data
-c:\users\drew deraita\documents\github\rsa\rsa\keygen.cpp(62): warning C4244: '=': conversion from 'big' to 'int', possible loss of data
+﻿  main.cpp
   RSA.vcxproj -> C:\Users\Drew Deraita\Documents\GitHub\RSA\x64\Debug\RSA.exe

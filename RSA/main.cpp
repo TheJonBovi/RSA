@@ -3,7 +3,6 @@
 
 #include "keygen.h"
 #include "encryption.h"
-#include "signature.h"
 #include <iostream>
 
 using namespace std;// /FORCE:MULTIPLE
@@ -37,63 +36,71 @@ int main()
 		{
 		case 1:
 			{
-				keyset keys0;
-				keyset keys1;
-				keyset keys2;
-
-
-				//GenerateKey(59, 79, 0);
 				//GenerateKey(59, 79, 1);
-				keys0 = GenerateKey(10067, 10159, 2);
-				keys1 = GenerateKey(10067, 10159, 2);
-				keys2 = GenerateKey(10067, 10159, 2);
+				const keyset keys1 = GenerateKey(59, 79);
+				const keyset keys2 = GenerateKey(10067, 10159);
+				const keyset keys3 = GenerateKey(10067, 10159);
 
-				User::e_key = keys0.e;
-				User::d_key = keys0.d;
-				User::n		= keys0.n;
+				cout << " ***Keyset 1*** \n";
+				cout << " N: " << keys1.n << "\n";
+				cout << " e: " << keys1.e << "\n";
+				cout << " d: " << keys1.d << "\n";
+				cout << endl;
 
-			/*for(int i{}; i < 3; i++)
-			{ 
-				cout << " Keyset" << i + 1 << ": \n";
-				cout << " N: " << keys0[i][0] << "\n";
-				cout << " e: " << keys1[i][1] << "\n";
-				cout << " d: " << keys2[i][2] << "\n";
-			}*/
+				cout << " ***Keyset 2*** \n";
+				cout << " N: " << keys2.n << "\n";
+				cout << " e: " << keys2.e << "\n";
+				cout << " d: " << keys2.d << "\n";
+				cout << endl;
+
+				cout << " ***Keyset 3*** \n";
+				cout << " N: " << keys3.n << "\n";
+				cout << " e: " << keys3.e << "\n";
+				cout << " d: " << keys3.d << "\n";
+				cout << endl;
 
 			break;
 			}
 
 		case 2:
 			{
-			cout << " Please input Plaintext: \n";
+			cout << " Please input Plaintext: ";
 			cin >> plainText;
-			cout << " Please input N: \n";
+			cout << endl;
+			cout << " Please input N: ";
 			cin >> valN;
-			cout << " Please input e: \n";
+			cout << endl;
+			cout << " Please input e: ";
 			cin >> e;
+			cout << endl;
 			cout << " The ciphertext is: ";
 			cout << Encrypt(plainText, e, valN);
+			cout << endl << endl;
 
 			break;
 			}
 
 		case 3:
-		{
-			cout << " Please input Ciphertext: \n";
+			{
+			cout << " Please input Ciphertext: ";
 			cin >> cipherText;
-			cout << " Please input N: \n";
+			cout << endl;
+			cout << " Please input N: ";
 			cin >> valN;
-			cout << " Please input d: \n";
+			cout << endl;
+			cout << " Please input d: ";
 			cin >> d;
+			cout << endl;
 			cout << " The plaintext is: ";
 			cout << Decrypt(cipherText, d, valN);
+			cout << endl << endl;
+
 			break;
-		}
+			}
 
 		case 4: 
 			cout << " End of Program.\n";
 			programRun = false;
-			return 0;
 
 			break;
 

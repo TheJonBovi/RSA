@@ -157,13 +157,11 @@
   <ItemGroup>
     <ClInclude Include="encryption.h" />
     <ClInclude Include="keygen.h" />
-    <ClInclude Include="signature.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="encryption.cpp" />
     <ClCompile Include="keygen.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="signature.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md" />

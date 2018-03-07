@@ -3,7 +3,7 @@
 
 using namespace User;
 
-auto GenerateKey(const int p,const int q, const int keyno)
+keyset GenerateKey(const int p,const int q)
 {
 	auto const n = p * q;
 	auto const phi = (p - 1) * (q - 1);
@@ -17,20 +17,21 @@ auto GenerateKey(const int p,const int q, const int keyno)
 	}
 
 	auto d = n - 1;
-	d = InverseGCD(e, phi);
+	//d = InverseGCD(e, phi);
 
-	keyset ret = {e, d, n};
-
-	return ret;
-
-	/*
 	bool foundD{};
 	while(!foundD)
 	{
-		if((e * d) % phi == 1) foundD = true;
+		if((e * d) % phi == 1 && d > 0) foundD = true;
 		else d--;
 	}
-	*/
+
+	keyset retset;
+	retset.e = e;
+	retset.d = d;
+	retset.n = n;
+
+	return retset;
 }
 
 // TODO: This doesnt work 
