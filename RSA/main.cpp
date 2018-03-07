@@ -11,12 +11,11 @@ using namespace User;
 
 int main()
 {
-	int choice;
-	big keyP, keyQ;
-	big key;
+	big e, d;
 	big valN;
 	big plainText;
 	big cipherText;
+	int choice;
 	bool programRun = true;
 
 	while (programRun)
@@ -38,36 +37,48 @@ int main()
 		{
 		case 1:
 			{
+				big keys[3][3];
 
-			cout << "Please input 1st prime number\n";
-			cin >> keyP;
-			cout << "Please input 2nd prime number\n";
-			cin >> keyQ;
+				//GenerateKey(59, 79, 0);
+				//GenerateKey(59, 79, 1);
+				GenerateKey(10067, 10159, 2);
 
-			key = GenerateKey(59, 79);
+
+			for(int i{}; i < 3; i++)
+			{ 
+				cout << " Keyset" << i + 1 << ": \n";
+				cout << " N: " << keys[i][0] << "\n";
+				cout << " e: " << keys[i][1] << "\n";
+				cout << " d: " << keys[i][2] << "\n";
+			}
 
 			break;
 			}
 
 		case 2:
 			{
-
-			cout << "Please input Plaintext \n";
+			cout << " Please input Plaintext: \n";
 			cin >> plainText;
-			cout << "Please input N \n";
+			cout << " Please input N: \n";
 			cin >> valN;
-			cout << Encrypt(plainText, key, valN);
+			cout << " Please input e: \n";
+			cin >> e;
+			cout << " The ciphertext is: ";
+			cout << Encrypt(plainText, e, valN);
 
 			break;
 			}
 
 		case 3:
 		{
-			cout << "Please input Ciphertext \n";
+			cout << " Please input Ciphertext: \n";
 			cin >> cipherText;
-			cout << "Please input N \n";
+			cout << " Please input N: \n";
 			cin >> valN;
-			cout << Decrypt(cipherText, key, valN);
+			cout << " Please input d: \n";
+			cin >> d;
+			cout << " The plaintext is: ";
+			cout << Decrypt(cipherText, d, valN);
 			break;
 		}
 

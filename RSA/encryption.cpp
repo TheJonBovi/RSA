@@ -26,43 +26,20 @@ namespace User
 		return ans;
 	}
 
-	//std::string	Encrypt(std::string message, big other_key, big other_n){ return message; }//Call big Encrypt foreach chunk of data in our message.
-
-	big			Encrypt(big message, big other_key, big other_n)		{ return ModX(message, other_key, other_n); }
-
-	//std::string	Decrypt(std::string message)							{ return message; }//Call big Decrypt foreach chunk of data in our message
-
-	
-
-	big			SendSignature(big signiture = DEFAULT_SIGNATURE)		{ return Decrypt(signiture); }
-
-	big			TestSignature(big e_signature, big other_key, big other_n, big d_signature = DEFAULT_SIGNATURE)
-					{ return d_signature == ModX(e_signature, other_key, other_n); }
-
 	big	Encrypt(big plainText, big publicKey, big modN)
 	{
+		big cipherText = pow(plainText, publicKey);
+		cipherText = cipherText % modN;  //this weirdness is split into 2 lines because POW was being difficult
 
-		big cipherText;
-
-		cipherText = plainText = pow(cipherText, publicKey);
-		plainText = plainText % modN;  //this weirdness is split into 2 lines because POW was being difficult
-
-		return plainText;
-
-
-
+		return cipherText;
 	}
 
 	big	Decrypt(big cipherText, big privateKey, big modN) 
 	{ 
-	
-		big plainText;
-
-		plainText = pow(cipherText, privateKey);
+		big plainText = pow(cipherText, privateKey);
 		plainText = plainText % modN;  //this weirdness is split into 2 lines because POW was being difficult
 
 		return plainText;
-	
 	}
 
 }
