@@ -16,7 +16,7 @@ keyset GenerateKey(const big p,const big q, const big inite)
 		else e++;
 	}
 
-	auto d = 2;
+	big d = 2;
 	//d = InverseGCD(e, phi);
 
 	bool foundD{};

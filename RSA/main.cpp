@@ -41,6 +41,10 @@ int main()
 				const auto keys2 = GenerateKey(11587, 11287, 10);
 				const auto keys3 = GenerateKey(10067, 10159, 15);
 
+				User::e_key = keys1.e;
+				User::d_key = keys1.d;
+				User::n = keys1.n;
+
 				cout << " ***Keyset 1*** \n";
 				cout << " N: " << keys1.n << "\n";
 				cout << " e: " << keys1.e << "\n";
@@ -64,7 +68,7 @@ int main()
 
 		case 2:
 			{
-			cout << " Please input Plaintext: ";
+			cout << " Please input plaintext: ";
 			cin >> plainText;
 			cout << endl;
 			cout << " Please input N: ";
@@ -82,7 +86,7 @@ int main()
 
 		case 3:
 			{
-			cout << " Please input Ciphertext: ";
+			cout << " Please input ciphertext: ";
 			cin >> cipherText;
 			cout << endl;
 			cout << " Please input N: ";

@@ -25,21 +25,8 @@ namespace User
 		while(expo--){ ans = ans*base % n; }
 		return ans;
 	}
+	big	Encrypt(big message, big other_key, big other_n) { return ModX(message, other_key, other_n); }
 
-	big	Encrypt(big plainText, big publicKey, big modN)
-	{
-		big cipherText = pow(plainText, publicKey);
-		cipherText = cipherText % modN;  //this weirdness is split into 2 lines because POW was being difficult
-
-		return cipherText;
-	}
-
-	big	Decrypt(big cipherText, big privateKey, big modN) 
-	{ 
-		big plainText = pow(cipherText, privateKey);
-		plainText = plainText % modN;  //this weirdness is split into 2 lines because POW was being difficult
-
-		return plainText;
-	}
+	big	Decrypt(big message, big private_key, big other_n) { return ModX(message, private_key, other_n); }
 
 }

@@ -16,7 +16,7 @@ namespace User
 
 	big ModX(big base, big expo, big n);
 
-	big	Encrypt(big plainText, big publicKey, big modN);
+	big	Encrypt(big message, big other_key, big other_n);
 
-	big	Decrypt(big cipherText, big privateKey, big modN);
+	big	Decrypt(big message, big private_key, big other_n);
 }
