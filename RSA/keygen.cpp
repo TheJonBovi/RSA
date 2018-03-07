@@ -3,11 +3,11 @@
 
 using namespace User;
 
-keyset GenerateKey(const int p,const int q, const int inite)
+keyset GenerateKey(const big p,const big q, const big inite)
 {
-	auto const n = p * q;
-	auto const phi = (p - 1) * (q - 1);
-	auto e = inite;
+	big const n = p * q;
+	big const phi = (p - 1) * (q - 1);
+	big e = inite;
 
 	bool foundE{};
 	while(!foundE)
