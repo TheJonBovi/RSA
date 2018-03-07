@@ -3,31 +3,35 @@
 
 using namespace User;
 
-void GenerateKey(const int p,const int q)
+big GenerateKey(const int p,const int q)
 {
 	auto const n = p * q;
 	auto const phi = (p - 1) * (q - 1);
-	auto e = phi / 2;
+	auto e = phi - 1;
 
 	bool foundE{};
 	while(!foundE)
 	{
-		if(User::GCD(e, phi) == 1 && e < phi) foundE = true;
-		else e++;
+		if(User::GCD(e, phi) == 1) foundE = true;
+		else e--;
 	}
 
 	auto d = n - 1;
-	//d = InverseGCD(e, phi);
+	d = InverseGCD(e, phi);
+	/*
 	bool foundD{};
-	// TODO: This works for some numbers
 	while(!foundD)
 	{
-		if((e * d) % phi == 1 && d > 0) foundD = true;
+		if((e * d) % phi == 1) foundD = true;
 		else d--;
 	}
+	*/
+
+	return d; //maybe incorrect return value
+
 }
 
-// TODO: This doesnt work
+// TODO: This doesnt work, will look at tomorrow
 int InverseGCD(const int e, const int phi)
 {
 	int g[100];
@@ -35,6 +39,7 @@ int InverseGCD(const int e, const int phi)
 	int v[100];
 
 	auto i{ 1 };
+	int d;
 
 	g[0] = phi;
 	g[1] = e;
@@ -51,14 +56,13 @@ int InverseGCD(const int e, const int phi)
 		i++;
 	}
 	
-	int d;
 	if (v[i - 1] <= 0)
 	{
-		d = v[i - 1] + phi;
+		d = v[i - 1] + n;
 	}
 	else
 	{
-		d = v[i - 1] + 2 * phi;
+		d = v[i - 1] + 2 * n;
 	}
 
 	return d;

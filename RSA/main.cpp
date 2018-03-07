@@ -7,13 +7,17 @@
 #include <iostream>
 
 using namespace std;// /FORCE:MULTIPLE
-
-enum Menu { keygen = 1 , encrypt, decrypt, cancel };
+using namespace User;
 
 int main()
 {
 	int choice;
-	auto programRun = true;
+	big keyP, keyQ;
+	big key;
+	big valN;
+	big plainText;
+	big cipherText;
+	bool programRun = true;
 
 	while (programRun)
 	{
@@ -32,26 +36,42 @@ int main()
 
 		switch (choice)
 		{
-		case keygen:
+		case 1:
 			{
-			GenerateKey(59, 79);
+
+			cout << "Please input 1st prime number\n";
+			cin >> keyP;
+			cout << "Please input 2nd prime number\n";
+			cin >> keyQ;
+
+			key = GenerateKey(59, 79);
 
 			break;
 			}
 
-		case encrypt:
+		case 2:
 			{
+
+			cout << "Please input Plaintext \n";
+			cin >> plainText;
+			cout << "Please input N \n";
+			cin >> valN;
+			cout << Encrypt(plainText, key, valN);
 
 			break;
 			}
 
-		case decrypt:
-			{
-
+		case 3:
+		{
+			cout << "Please input Ciphertext \n";
+			cin >> cipherText;
+			cout << "Please input N \n";
+			cin >> valN;
+			cout << Decrypt(cipherText, key, valN);
 			break;
-			}
+		}
 
-		case cancel: 
+		case 4: 
 			cout << " End of Program.\n";
 			programRun = false;
 			return 0;
