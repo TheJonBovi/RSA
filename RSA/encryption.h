@@ -6,6 +6,12 @@
 
 using big = unsigned long long;
 
+struct keyset
+{	big e;
+	big d;
+	big n;
+};
+
 namespace User
 {
 	extern big n, e_key, d_key;

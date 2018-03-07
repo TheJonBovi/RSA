@@ -37,20 +37,28 @@ int main()
 		{
 		case 1:
 			{
-				big keys[3][3];
+				keyset keys0;
+				keyset keys1;
+				keyset keys2;
+
 
 				//GenerateKey(59, 79, 0);
 				//GenerateKey(59, 79, 1);
-				GenerateKey(10067, 10159, 2);
+				keys0 = GenerateKey(10067, 10159, 2);
+				keys1 = GenerateKey(10067, 10159, 2);
+				keys2 = GenerateKey(10067, 10159, 2);
 
+				User::e_key = keys0.e;
+				User::d_key = keys0.d;
+				User::n		= keys0.n;
 
-			for(int i{}; i < 3; i++)
+			/*for(int i{}; i < 3; i++)
 			{ 
 				cout << " Keyset" << i + 1 << ": \n";
-				cout << " N: " << keys[i][0] << "\n";
-				cout << " e: " << keys[i][1] << "\n";
-				cout << " d: " << keys[i][2] << "\n";
-			}
+				cout << " N: " << keys0[i][0] << "\n";
+				cout << " e: " << keys1[i][1] << "\n";
+				cout << " d: " << keys2[i][2] << "\n";
+			}*/
 
 			break;
 			}
